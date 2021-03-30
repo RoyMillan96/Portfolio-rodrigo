@@ -54,3 +54,7 @@ npx prettier . --write
 
 # agregar firebase admin
 yarn add firebase-admin
+
+
+# instalar materia ui
+yarn add @material-ui/core @material-ui/icons @material-ui/styles
