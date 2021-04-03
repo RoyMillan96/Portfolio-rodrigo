@@ -54,3 +54,6 @@ npx prettier . --write
 
 # agregar firebase admin
 yarn add firebase-admin
+
+yarn add react-typed
+yarn add react-particles-js
