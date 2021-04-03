@@ -59,3 +59,6 @@ yarn add firebase-admin
 yarn add react-typed
 
 yarn add react-particles-js
+
+# instalar materia ui
+yarn add @material-ui/core @material-ui/icons @material-ui/styles
