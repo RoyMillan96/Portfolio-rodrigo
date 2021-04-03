@@ -55,6 +55,7 @@ npx prettier . --write
 # agregar firebase admin
 yarn add firebase-admin
 
+# agregar otras dependencias de ract
+yarn add react-typed
 
-# instalar materia ui
-yarn add @material-ui/core @material-ui/icons @material-ui/styles
+yarn add react-particles-js
