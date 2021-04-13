@@ -1,10 +1,10 @@
 import {useState} from "react"
 import { makeStyles } from '@material-ui/core/styles';
-import {AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, ListItemIcon , Typography, Box } from "@material-ui/core";
-import {AssignmentInd, Home, Apps, ContactMail} from "@material-ui/icons"
+import {AppBar, Toolbar, ListItem, IconButton, ListItemText, Divider, List, ListItemIcon , Typography, Box } from "@material-ui/core";
+import {AssignmentInd, Home, Apps, BookRounded, BuildRounded, EmojiPeopleRounded} from "@material-ui/icons"
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
-// import avatar from "../public/avatar.png";
+import AvatarIcon from "./Icons/Avatar";
 
 // CSS Styles
 const useStyles = makeStyles(theme => ({
@@ -16,8 +16,8 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13)
+    width: theme.spacing(14),
+    height: theme.spacing(14)
   },
   ListItem: {
     color: "tan"
@@ -30,16 +30,24 @@ const menuItems = [
     listText: "Home",
   },
   {
+    listIcon: <EmojiPeopleRounded/>,
+    listText: "About me",
+  },
+  {
     listIcon: <AssignmentInd/>,
-    listText: "Resume",
+    listText: "Professional resume",
+  },
+  {
+    listIcon: <BuildRounded/>,
+    listText: "Skills",
+  },
+  {
+    listIcon: <BookRounded/>,
+    listText: "Blog",
   },
   {
     listIcon: <Apps/>,
     listText: "Portfolio",
-  },
-  {
-    listIcon: <ContactMail/>,
-    listText: "Contact",
   }
 ]
 
@@ -56,7 +64,7 @@ function Navbar() {
 
   const sideList = slider => (
     <Box className={classes.menuSliderContainer} component="div" onClick={toggleSlider(slider, false)}>
-      <Avatar className={classes.avatar} src="" alt="Rodrigo Millan "/>
+      <AvatarIcon className={classes.avatar} alt="Rodrigo Millan"/>
       <Divider />
       <List>
         {menuItems.map((lsItems, key) => (
