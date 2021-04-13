@@ -1,15 +1,16 @@
 import {useState} from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, Toolbar, ListItem, IconButton, ListItemText, Divider, List, ListItemIcon , Typography, Box } from "@material-ui/core";
-import {AssignmentInd, Home, Apps, BookRounded, BuildRounded, EmojiPeopleRounded} from "@material-ui/icons"
+import {AssignmentIndRounded, HomeRounded, AppsRounded, BookRounded, BuildRounded, EmojiPeopleRounded, WebRounded} from "@material-ui/icons"
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import AvatarIcon from "./Icons/Avatar";
+import Footer from "./Footer";
 
 // CSS Styles
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
-    width: 300,
+    width: 320,
     background: "#511",
     height: "100%"
   },
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 
 const menuItems = [
   {
-    listIcon: <Home/>,
+    listIcon: <HomeRounded/>,
     listText: "Home",
   },
   {
@@ -34,7 +35,7 @@ const menuItems = [
     listText: "About me",
   },
   {
-    listIcon: <AssignmentInd/>,
+    listIcon: <AssignmentIndRounded/>,
     listText: "Professional resume",
   },
   {
@@ -46,8 +47,12 @@ const menuItems = [
     listText: "Blog",
   },
   {
-    listIcon: <Apps/>,
+    listIcon: <AppsRounded/>,
     listText: "Portfolio",
+  },
+  {
+    listIcon: <WebRounded/>,
+    listText: "courses",
   }
 ]
 
@@ -92,6 +97,7 @@ function Navbar() {
             </Typography>
             <MobilRightMenuSlider anchor="right" open={stateNavbar.right} onClose={toggleSlider("right", false)}>
               {sideList("right")}
+              <Footer/>
             </MobilRightMenuSlider>
           </Toolbar>
         </AppBar>
