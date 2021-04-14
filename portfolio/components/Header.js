@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import Typed from "react-typed"
-import { Typography, Grid, Box} from "@material-ui/core"
+import { Typography, Grid, Box, BottomNavigationAction} from "@material-ui/core"
 import {makeStyles} from "@material-ui/core/styles"
+import {EmailRounded} from "@material-ui/icons"
 import AvatarIcon from "./Icons/Avatar"
 
 // CSS Styles
@@ -25,6 +27,19 @@ const useStyles = makeStyles(theme=>({
     width: "100vw",
     textAlign: "center",
     zIndex: 1
+  }, 
+  root: {
+    "& .MuiBottomNavigationAction-root":{
+      minWidth: 0,
+      maxWidth: 250,
+    },
+    "& .MuiSvgIcon-root":{
+      fill: "tan",
+      "&:hover": {
+        fill: "tomato",
+        fontSize: "1.8rem"
+      }
+    }
   }
 }))
 
@@ -43,6 +58,13 @@ export default function Header() {
       <Typography className={classes.subtitle} variant="h5">
         <Typed strings={["Web Design", "We Development", "technical support"]} typeSpeed={40} backSpeed={60} loop/>
       </Typography>
+      <Link href="mailto:rodrigomillanc@outlook.com">
+          <BottomNavigationAction 
+            className={classes.root}
+            style={{padding: 0}}
+            icon={<EmailRounded/>}
+          /> 
+        </Link>
       </Box>
     </>
   );

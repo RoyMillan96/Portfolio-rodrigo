@@ -52,7 +52,7 @@ const menuItems = [
   },
   {
     listIcon: <WebRounded/>,
-    listText: "courses",
+    listText: "Courses",
   }
 ]
 
