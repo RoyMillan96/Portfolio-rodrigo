@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { makeStyles } from "@material-ui/styles"
 import {BottomNavigation, BottomNavigationAction} from "@material-ui/core"
 import {Instagram, Telegram, GitHub, LinkedIn} from "@material-ui/icons"
@@ -23,26 +24,34 @@ function Footer() {
   return (
     <div>
       <BottomNavigation width="auto" style={{background: "#222"}}>
-        <BottomNavigationAction 
-          className={classes.root}
-          style={{padding: 0}}
-          icon={<Instagram/>}
-        />
-        <BottomNavigationAction 
-          className={classes.root}
-          style={{padding: 0}}
-          icon={<Telegram/>}
-        />
-        <BottomNavigationAction 
-          className={classes.root}
-          style={{padding: 0}}
-          icon={<GitHub/>}
-        />
-        <BottomNavigationAction 
-          className={classes.root}
-          style={{padding: 0}}
-          icon={<LinkedIn/>}
-        />
+        <Link href="https://www.instagram.com/millan.rodrigo/">
+            <BottomNavigationAction 
+            className={classes.root}
+            style={{padding: 0}}
+            icon={<Instagram/>}
+            />
+        </Link>
+        <Link href="https://t.me/RoyMillan96">
+          <BottomNavigationAction 
+            className={classes.root}
+            style={{padding: 0}}
+            icon={<Telegram/>}
+          />
+        </Link>
+        <Link href="https://github.com/RoyMillan96">
+          <BottomNavigationAction 
+            className={classes.root}
+            style={{padding: 0}}
+            icon={<GitHub/>}
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/in/rodrigo-millan-colin-605b73178/">
+          <BottomNavigationAction 
+            className={classes.root}
+            style={{padding: 0}}
+            icon={<LinkedIn/>}
+          />
+        </Link>
       </BottomNavigation>
     </div>
   )
